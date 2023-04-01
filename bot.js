@@ -26,7 +26,7 @@ function iHaveTelegram(){
 
     var textElement = document.getElementById("chatbox");
 
-    setTimeout(addButtonToChat, 4600, "Quack", openTelegram, textElement);
+    setTimeout(addButtonToChat, 4600, "Telegram", openTelegram, textElement);
 }
 
 function iDontHaveTelegram(){
