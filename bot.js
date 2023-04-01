@@ -17,7 +17,6 @@ function ola(){
     setTimeout(addQuestionButtonToChat, 4000, "Sim. Eu tenho!", iHaveTelegram, textElement);
     setTimeout(addQuestionButtonToChat, 4000, "Não Tenho", iDontHaveTelegram, textElement);
 }
-
 function iHaveTelegram(){
     addUserTextInChat("Sim. Eu tenho!");
     document.getElementById("question").remove();
@@ -73,7 +72,7 @@ function openTelegram(){
 function addVideoToChat(videoURL){
     var avatar = document.createElement('img');
     avatar.setAttribute("id", "avatar");
-    avatar.setAttribute("src", "https://i.imgur.com/J40oxC0.png");
+    avatar.setAttribute("src", "bot.png");
 
     var textElement = document.createElement('div');
     textElement.setAttribute("id", "chat-text");
