@@ -1,0 +1,146 @@
+#chat-text {
+    color: black;
+    background-color: #e7e8f2;
+    padding: 5px;
+    margin: 4px;
+    border-radius: 30px;
+    min-height: 50px;
+
+    animation: slide 0.5s forwards;
+    animation-delay: 2s;
+}
+
+@-webkit-keyframes slide {
+  100% { left: 0; }
+}
+
+@keyframes slide {
+  100% { left: 0; }
+}
+
+#chat-user-text{
+    background-color: #a0e3ba;
+    margin: 4px;
+    border-radius: 25px;
+    min-height: 50px;
+    margin-left: 70%;
+}
+
+#chat-user-text p{
+    position: absolute;
+    margin-left: 14px;
+    margin-top: 12px;
+    color: #4e5166;
+    font-family: tahoma;
+    font-size: 14pt;
+    
+}
+
+#chat-text a{
+  position: absolute;
+  margin-left: 60px;
+  margin-top: 13px;
+  color: #6476A3;
+  font-family: tahoma;
+  font-size: 14pt;
+}
+
+#chat-text p {
+    margin-left: 60px;
+    color: #4e5166;
+    font-family: tahoma;
+    font-size: 14pt;
+}
+
+#avatar {
+    margin-top: 5px;
+    position: absolute;
+    width: 50px;
+}
+
+#user-bt{
+    border: 0px;
+    cursor: pointer;
+    font-family: tahoma;
+    font-size: 14px;
+    background-color: #a0e3ba;
+    padding: 10px;
+    margin-left: 10px;
+    width: 120px;
+    border-radius: 30px;
+    color: 4e5166;
+}
+
+#user-bt:hover {
+    background-color: #91d9ad;
+}
+
+#bot-bt {
+    border: 0px;
+    cursor: pointer;
+    font-family: tahoma;
+    font-size: 14px;
+    background-color: #0088cc;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 30px;
+    color: 4e5166;
+}
+
+
+#bot-bt:hover{
+    background-color: #006ecc;
+}
+
+#question {
+    float: right;
+    margin: 4px;
+    padding: 5px;
+    border-radius: 30px;
+}
+
+.dot-flashing {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #9880ff;
+    color: #9880ff;
+    animation: dot-flashing 1s infinite linear alternate;
+    animation-delay: 0.5s;
+  }
+  .dot-flashing::before, .dot-flashing::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+  }
+  .dot-flashing::before {
+    left: -15px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #9880ff;
+    color: #9880ff;
+    animation: dot-flashing 1s infinite alternate;
+    animation-delay: 0s;
+  }
+  .dot-flashing::after {
+    left: 15px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #9880ff;
+    color: #9880ff;
+    animation: dot-flashing 1s infinite alternate;
+    animation-delay: 1s;
+  }
+  
+  @keyframes dot-flashing {
+    0% {
+      background-color: #9880ff;
+    }
+    50%, 100% {
+      background-color: rgba(152, 128, 255, 0.2);
+    }
+  }
