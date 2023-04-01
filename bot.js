@@ -26,7 +26,7 @@ function iHaveTelegram(){
 
     var textElement = document.getElementById("chatbox");
 
-    setTimeout(addButtonToChat, 4600, "Telegram", openTelegram, textElement);
+    setTimeout(addButtonToChat, 4600, "Quack", openTelegram, textElement);
 }
 
 function iDontHaveTelegram(){
@@ -67,7 +67,7 @@ function iphone(){
 }
 
 function openTelegram(){
-    window.open('https://t.me/+eE95Ew52VDkyNTcx');
+    window.open('https://t.me/+_CSUoK6EeDFhOTc5');
 }
 
 function addVideoToChat(videoURL){
