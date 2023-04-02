@@ -100,7 +100,7 @@ function addLinkInChat(text, link){
     textElement.setAttribute("id", "chat-text");
 
     textElement.appendChild(avatar);
-
+    
     var a = document.createElement('a');
     a.setAttribute("href", link);
     textElement.appendChild(a);
