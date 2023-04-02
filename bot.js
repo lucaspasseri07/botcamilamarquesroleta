@@ -64,7 +64,7 @@ function android(){
     setTimeout(addTextInChat, 3000, "E caso já saiba instalar, clique no botão abaixo para baixar o aplicativo.");
 
     var textElement = document.getElementById("chatbox");
-    setTimeout(addButtonToChat, 4600, "Baixar Telegram", downloadTelegram, textElement);
+    setTimeout(addButtonToChat, 4600, "Baixar Telegram", downloadTelegramAndroid, textElement);
 }
 
 function iphone(){
@@ -78,13 +78,17 @@ function iphone(){
     setTimeout(addTextInChat, 3000, "E caso já saiba instalar, clique no botão abaixo para baixar o aplicativo.");
 
     var textElement = document.getElementById("chatbox");
-    setTimeout(addButtonToChat, 4600, "Baixar Telegram", downloadTelegram, textElement);
+    setTimeout(addButtonToChat, 4600, "Baixar Telegram", downloadTelegramIphone, textElement);
 
 
 }
 
-function downloadTelegram(){
+function downloadTelegramAndroid(){
     window.open("https://play.google.com/store/apps/details?id=org.telegram.messenger&hl=pt_BR")
+}
+
+function downloadTelegramIphone(){
+    window.open("https://apps.apple.com/br/app/telegram-messenger/id686449807")
 }
 
 function openTelegram(){
