@@ -11,12 +11,18 @@ body {
   scroll-behavior: auto;
 }
 
+#chat-text video{
+  margin-left: 65px;
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
 #chat-text {
     color: white;
     background-color: #191919;
     background: linear-gradient(90deg, rgba(15,25,35,.3) -100%, rgba(15,15,15,.3) 200%);
     padding: 4px;
-    margin: 10px;
+    margin: 15px;
     border-radius: 30px;
     min-height: 60px;
     overflow: hidden;
@@ -63,6 +69,7 @@ body {
     margin-top: 5px;
     position: absolute;
     width: 50px;
+    padding
 }
 
 #user-bt{
@@ -96,7 +103,6 @@ body {
     color: 4e5166;
 }
 
-
 #bot-bt:hover{
     background-color: #070c12;
 }
@@ -108,48 +114,13 @@ body {
     border-radius: 30px;
 }
 
-.dot-flashing {
-    position: relative;
-    width: 10px;
-    height: 10px;
-    border-radius: 5px;
-    background-color: #9880ff;
-    color: #9880ff;
-    animation: dot-flashing 1s infinite linear alternate;
-    animation-delay: 0.5s;
-  }
-  .dot-flashing::before, .dot-flashing::after {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    top: 0;
-  }
-  .dot-flashing::before {
-    left: -15px;
-    width: 10px;
-    height: 10px;
-    border-radius: 5px;
-    background-color: #9880ff;
-    color: #9880ff;
-    animation: dot-flashing 1s infinite alternate;
-    animation-delay: 0s;
-  }
-  .dot-flashing::after {
-    left: 15px;
-    width: 10px;
-    height: 10px;
-    border-radius: 5px;
-    background-color: #9880ff;
-    color: #9880ff;
-    animation: dot-flashing 1s infinite alternate;
-    animation-delay: 1s;
-  }
-  
-  @keyframes dot-flashing {
-    0% {
-      background-color: #9880ff;
-    }
-    50%, 100% {
-      background-color: rgba(152, 128, 255, 0.2);
-    }
-  }
+#time {
+  position: absolute;
+  font-family: abzuka;
+  font-size: 10pt;
+  padding: 7px;
+  border-radius: 30px;
+  right: 20px;
+  margin-top: -15px;
+  background-color: #1e2021;
+}

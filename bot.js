@@ -28,6 +28,16 @@ function iHaveTelegram(){
     setTimeout(addButtonToChat, 4600, "Telegram", openTelegram, textElement);
 }
 
+function addTimeToDiv(content){
+    var tm = document.createElement('div');
+    tm.setAttribute("id", "time");
+    var today = new Date();
+    var time = today.getDay() + "/" + today.getMonth() + "/" + today.getFullYear() + " : " + today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+
+    tm.innerHTML = time;
+    content.appendChild(tm);
+}
+
 function iDontHaveTelegram(){
     addUserTextInChat("Não tenho.");
     document.getElementById("question").remove();
@@ -156,6 +166,8 @@ function addTextInChat(text){
 
     typeWriter(text, p);
     
+    addTimeToDiv(textElement);
+
     avatar.scrollIntoView();
 }
 
