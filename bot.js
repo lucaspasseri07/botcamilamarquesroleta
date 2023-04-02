@@ -89,6 +89,8 @@ function addVideoToChat(videoURL){
     textElement.appendChild(video);
 
     document.getElementById("chatbox").appendChild(textElement);
+
+    avatar.scrollIntoView();
 }
 
 function addLinkInChat(text, link){
@@ -108,6 +110,8 @@ function addLinkInChat(text, link){
     document.getElementById("chatbox").appendChild(textElement);
 
     typeWriter(text, a);
+
+    avatar.scrollIntoView();
 }
 
 function addQuestionButtonToChat(text, func, element){
@@ -118,6 +122,8 @@ function addQuestionButtonToChat(text, func, element){
 
     element.appendChild(bt);
     document.getElementById("chatbox").appendChild(element);
+
+    bt.scrollIntoView();
 }
 
 function addButtonToChat(text, func, element){
@@ -128,6 +134,8 @@ function addButtonToChat(text, func, element){
 
     element.appendChild(bt);
     document.getElementById("chatbox").appendChild(element);
+
+    bt.scrollIntoView();
 }
 
 function addTextInChat(text){
@@ -147,6 +155,8 @@ function addTextInChat(text){
     document.getElementById("chatbox").appendChild(textElement);
 
     typeWriter(text, p);
+    
+    avatar.scrollIntoView();
 }
 
 function addUserTextInChat(text){
@@ -160,6 +170,8 @@ function addUserTextInChat(text){
     document.getElementById("chatbox").appendChild(textElement);
 
     typeWriter(text, p);
+
+    textElement.scrollIntoView();
 }
 
 function typeWriter(txt, div) {

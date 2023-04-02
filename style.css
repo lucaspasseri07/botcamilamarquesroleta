@@ -7,6 +7,8 @@ body {
   padding: 0px;
   margin: 0px;
   background-color: #2e2e2e;
+
+  scroll-behavior: auto;
 }
 
 #chat-text {
@@ -69,7 +71,7 @@ body {
     cursor: pointer;
     font-family: abzuka;
     font-size: 14px;
-    background-color: #181818;
+    background-color: #0f1923;
     padding: 10px;
     margin-left: 10px;
     width: 120px;
@@ -87,7 +89,7 @@ body {
     cursor: pointer;
     font-family: abzuka;
     font-size: 14px;
-    background-color: #181818;
+    background-color: #0f1923;
     padding: 10px;
     margin-left: 10px;
     border-radius: 30px;
@@ -96,7 +98,7 @@ body {
 
 
 #bot-bt:hover{
-    background-color: #0d0d0d;
+    background-color: #070c12;
 }
 
 #question {
