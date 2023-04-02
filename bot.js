@@ -32,7 +32,7 @@ function addTimeToDiv(content){
     var tm = document.createElement('div');
     tm.setAttribute("id", "time");
     var today = new Date();
-    var time = today.getDay() + "/" + today.getMonth() + "/" + today.getFullYear() + " : " + today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    var time = today.getDate() + "/" + (today.getMonth()+1) + '/' + today.getFullYear() + " " + today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 
     tm.innerHTML = time;
     content.appendChild(tm);
