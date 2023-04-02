@@ -22,7 +22,6 @@ body {
 }
 
 #chat-user-text {
-    margin: 30px;
     border-radius: 30px;
     min-height: 60px;
 }
