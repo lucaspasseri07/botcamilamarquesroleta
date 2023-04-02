@@ -7,15 +7,15 @@ function sleep(ms) {
 function ola(){
     addTextInChat("Olá!! Que bom que você chegou até aqui. Você está a um passo de entrar no nosso grupo gratuito.");
 
-    setTimeout(addTextInChat, 2500, "Preciso saber se você já tem o TELEGRAM instalado no seu telefone?");
+    setTimeout(addTextInChat, 4500, "Preciso saber se você já tem o TELEGRAM instalado no seu telefone?");
     
     var textElement = document.createElement('div');
     textElement.setAttribute("id", "question");
 
     var no = "Legal! Preciso saber então qual a versão do seu telefone:";
 
-    setTimeout(addQuestionButtonToChat, 4000, "Sim. Eu tenho!", iHaveTelegram, textElement);
-    setTimeout(addQuestionButtonToChat, 4000, "Não Tenho", iDontHaveTelegram, textElement);
+    setTimeout(addQuestionButtonToChat, 8000, "Sim. Eu tenho!", iHaveTelegram, textElement);
+    setTimeout(addQuestionButtonToChat, 8000, "Não Tenho", iDontHaveTelegram, textElement);
 }
 function iHaveTelegram(){
     addUserTextInChat("Sim. Eu tenho!");
@@ -42,7 +42,7 @@ function iDontHaveTelegram(){
     addUserTextInChat("Não tenho.");
     document.getElementById("question").remove();
     var msg = "Legal! Preciso saber então qual a versão do seu telefone:"
-    setTimeout(addTextInChat, 500, msg);
+    setTimeout(addTextInChat, 10, msg);
 
     var textElement = document.getElementById("chatbox");
 
@@ -191,9 +191,17 @@ function addTextInChat(text){
 
     addTimeToDiv(textElement);
 
-    typeWriter(text, p);
+    p.innerText = "Digitando...";
+
+    setTimeout(writeText, 2000, text, p);
 
     avatar.scrollIntoView();
+}
+
+
+function writeText(text, p){
+    p.innerText = "";
+    typeWriter(text, p);
 }
 
 function addUserTextInChat(text){
