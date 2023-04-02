@@ -61,7 +61,10 @@ function android(){
     setTimeout(addTextInChat, 400, msg);
     setTimeout(addVideoToChat, 2500, "https://blackboxsports.com.br/wp-content/uploads/2022/07/Android-E9fee31-1.mp4");
 
-    setTimeout(addLinkInChat, 3000, "E caso já saiba instalar, CLIQUE AQUI para baixar o aplicativo.", "https://smart.blackspaceman.com/sf/?sfunnel=20/");
+    setTimeout(addTextInChat, 3000, "E caso já saiba instalar, clique no botão abaixo para baixar o aplicativo.");
+
+    var textElement = document.getElementById("chatbox");
+    setTimeout(addButtonToChat, 4600, "Baixar Telegram", downloadTelegram, textElement);
 }
 
 function iphone(){
@@ -72,7 +75,16 @@ function iphone(){
     setTimeout(addTextInChat, 400, msg);
     setTimeout(addVideoToChat, 2500, "https://blackboxsports.com.br/wp-content/uploads/2022/07/Android-E9fee31-1.mp4");
 
-    setTimeout(addLinkInChat, 3000, "E caso já saiba instalar, CLIQUE AQUI para baixar o aplicativo.", "https://smart.blackspaceman.com/sf/?sfunnel=20/");
+    setTimeout(addTextInChat, 3000, "E caso já saiba instalar, clique no botão abaixo para baixar o aplicativo.");
+
+    var textElement = document.getElementById("chatbox");
+    setTimeout(addButtonToChat, 4600, "Baixar Telegram", downloadTelegram, textElement);
+
+
+}
+
+function downloadTelegram(){
+    window.open("https://play.google.com/store/apps/details?id=org.telegram.messenger&hl=pt_BR")
 }
 
 function openTelegram(){
@@ -101,8 +113,9 @@ function addVideoToChat(videoURL){
     document.getElementById("chatbox").appendChild(textElement);
 
     avatar.scrollIntoView();
-}
 
+    addTimeToDiv(textElement)
+}
 function addLinkInChat(text, link){
     var avatar = document.createElement('img');
     avatar.setAttribute("id", "avatar");
@@ -112,14 +125,20 @@ function addLinkInChat(text, link){
     textElement.setAttribute("id", "chat-text");
 
     textElement.appendChild(avatar);
-    
+
+    var p = document.createElement('p');
+
+    textElement.appendChild(p);
+
+    document.getElementById("chatbox").appendChild(textElement);
+
     var a = document.createElement('a');
     a.setAttribute("href", link);
     textElement.appendChild(a);
-    
-    document.getElementById("chatbox").appendChild(textElement);
 
     typeWriter(text, a);
+    
+    addTimeToDiv(textElement);
 
     avatar.scrollIntoView();
 }
@@ -184,6 +203,14 @@ function addUserTextInChat(text){
     typeWriter(text, p);
 
     textElement.scrollIntoView();
+
+    var tm = document.createElement('div');
+    tm.setAttribute("id", "time-user");
+    var today = new Date();
+    var time = today.getDate() + "/" + (today.getMonth()+1) + '/' + today.getFullYear() + " " + today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+
+    tm.innerHTML = time;
+    textElement.appendChild(tm);
 }
 
 function typeWriter(txt, div) {

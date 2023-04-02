@@ -7,8 +7,8 @@ body {
   padding: 0px;
   margin: 0px;
   background-color: #2e2e2e;
-
-  scroll-behavior: auto;
+  background-image: url("imgs/background.png");
+  background-repeat: repeat;
 }
 
 #chat-text video{
@@ -20,10 +20,10 @@ body {
 #chat-text {
     color: white;
     background-color: #191919;
-    background: linear-gradient(90deg, rgba(15,25,35,.3) -100%, rgba(15,15,15,.3) 200%);
+    background: linear-gradient(90deg, rgba(15,25,35, 0.8) -100%, rgba(15,15,15, 0.8) 200%);
     padding: 4px;
     margin: 15px;
-    border-radius: 30px;
+    border-radius: 20px;
     min-height: 60px;
     overflow: hidden;
 }
@@ -36,7 +36,7 @@ body {
 #chat-user-text p{
     margin: 30px;
     padding: 20px;
-    border-radius: 30px;
+    border-radius: 20px;
      background: linear-gradient(90deg, rgba(68, 99, 80, 0.3) 50%, rgba(40, 116,98, 0.3) 100%);
     position: absolute;
     margin-left: 14px;
@@ -44,6 +44,7 @@ body {
     color: white;
     font-family: abzuka;
     font-size: 14pt;
+    width: 30%;
     right: -20px;
     
 }
@@ -51,7 +52,6 @@ body {
 #chat-text a{
   position: absolute;
   margin-left: 65px;
-  margin-top: 17px;
   color: white;
   font-family: abzuka;
   font-size: 14pt;
@@ -82,7 +82,7 @@ body {
     padding: 10px;
     margin-left: 10px;
     width: 120px;
-    border-radius: 30px;
+    border-radius: 20px;
     color: 4e5166;
 }
 
@@ -95,9 +95,9 @@ body {
     border: 0px;
     cursor: pointer;
     font-family: abzuka;
-    font-size: 14px;
-    background-color: #0f1923;
-    padding: 10px;
+    font-size: 20px;
+    background: linear-gradient(90deg, rgba(0,132,198, 0.8)10%, rgba(0,81,156, 0.8) 100%);
+    padding: 20px;
     margin-left: 10px;
     border-radius: 30px;
     color: 4e5166;
@@ -116,11 +116,22 @@ body {
 
 #time {
   position: absolute;
-  font-family: abzuka;
-  font-size: 10pt;
+  font-family: tahoma bold;
+  font-size: 8pt;
   padding: 7px;
   border-radius: 30px;
   right: 20px;
-  margin-top: -15px;
-  background-color: #211f1f;
+  margin-top: -23px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#time-user {
+  position: absolute;
+  font-family: tahoma bold;
+  font-size: 8pt;
+  padding: 7px;
+  border-radius: 30px;
+  right: 20px;
+  margin-top: 37px;
+  color: rgba(255, 255, 255, 0.5);
 }
