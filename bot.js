@@ -5,18 +5,50 @@ function sleep(ms) {
 }
 
 function ola(){
-    addTextInChat("Olá!! Que bom que você chegou até aqui. Você está a um passo de entrar no nosso grupo gratuito.");
+    var text1 = "Olá!! Que bom que você chegou até aqui. Você está a um passo de garantir seu bônus de 2.5X ❤"
+    addTextInChat(text1);
 
-    setTimeout(addTextInChat, 2500, "Preciso saber se você já tem o TELEGRAM instalado no seu telefone?");
+    var text2 = "Deseja pegar seu código de 2.5x da fanpix?";
+
+    setTimeout(addTextInChat, text1.length * 23, text2);
     
     var textElement = document.createElement('div');
     textElement.setAttribute("id", "question");
 
     var no = "Legal! Preciso saber então qual a versão do seu telefone:";
 
-    setTimeout(addQuestionButtonToChat, 4000, "Sim. Eu tenho!", iHaveTelegram, textElement);
-    setTimeout(addQuestionButtonToChat, 4000, "Não Tenho", iDontHaveTelegram, textElement);
+    var lg = (text1.length + text2.length) * 23;
+
+    setTimeout(addQuestionButtonToChat, lg, "Sim", sim, textElement);
+    setTimeout(addQuestionButtonToChat, lg, "Não", nao, textElement);
 }
+
+function sim(){
+    addUserTextInChat("Sim");
+    document.getElementById("question").remove();
+
+    var text1 = "Segue o seu codigo bônus: MULTIFOCODIGITAL2.5";
+    setTimeout(addTextInChat, 200, text1);
+
+    var text2 = "Agora que você tem seu codigo bonus, segue o link de cadastro para efetivar";
+    setTimeout(addTextInChat, (text1.length * 25) + 400, text2);
+
+    setTimeout(addLinkInChat, (text1.length * 25) + (text2.length * 25) + 400, "http://bit.ly/fanpixbrasil", "http://bit.ly/fanpixbrasil");
+}
+
+function nao(){
+    addUserTextInChat("Não");
+    document.getElementById("question").remove();
+
+    var text1 = "Que pena 😞";
+    setTimeout(addTextInChat, 200, text1);
+
+    var text2 = "Caso mude de ideia aqui está seu código bônus: MULTIFOCODIGITAL2.5, você pode ativar entrando no link abaixo";
+    setTimeout(addTextInChat, (text1.length * 25) + 400, text2);
+
+    setTimeout(addLinkInChat, (text1.length * 25) + (text2.length * 25) + 400, "http://bit.ly/fanpixbrasil", "http://bit.ly/fanpixbrasil");   
+}
+
 function iHaveTelegram(){
     addUserTextInChat("Sim. Eu tenho!");
     document.getElementById("question").remove();

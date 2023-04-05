@@ -58,7 +58,6 @@ function downloadForIphone(){
     window.open("https://apps.apple.com/br/app/telegram-messenger/id686449807");
 }
 
-
 function downloadQuackIphone(){
     window.open("https://apps.apple.com/US/app/id1437397847?mt=8");
 }
