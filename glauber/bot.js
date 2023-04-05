@@ -47,7 +47,7 @@ function quackApp(){
 
     setTimeout(btDownloadForAndroid, (msg.length * delay * 1.4), "DOWNLOAD FOR ANDROID", downloadForAndroid, textElement);
     setTimeout(btDownloadForIphone, (msg.length * delay * 1.4), "DOWNLOAD FOR IPHONE", downloadForIphone, textElement);
-    setTimeout(btJoinFreeGroup, (msg.length * delay * 1.4), "SEE MORE IN QUACK", joinFreeGroup, textElement);
+    setTimeout(btJoinFreeGroup, (msg.length * delay * 1.4), "SEE MORE IN QUACK", joinQuackGroup, textElement);
 }
 
 function downloadForAndroid(){
